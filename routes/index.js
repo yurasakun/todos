@@ -19,11 +19,5 @@ router.use(function(req, res) {
     });
 });
 
-router.use(function(req, res) {
-    return res.status(404).send({
-        success: false,
-        message: 'Resource not found.'
-    });
-});
 
 module.exports = router;
