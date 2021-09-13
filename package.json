@@ -1,6 +1,6 @@
 {
   "name": "todos",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "start": "node ./bin/www"
@@ -10,5 +10,18 @@
     "debug": "~2.6.9",
     "express": "~4.16.1",
     "morgan": "~1.9.1"
-  }
+  },
+  "description": "test work",
+  "main": "app.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yurasakun/todos.git"
+  },
+  "author": "yura",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yurasakun/todos/issues"
+  },
+  "homepage": "https://github.com/yurasakun/todos#readme"
 }
