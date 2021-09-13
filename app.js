@@ -2,9 +2,8 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-
 var Router = require('./router');
-
+var db = require('./config/db');
 
 var app = express();
 
@@ -15,6 +14,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', Router);
-
+// nodemon --inspect ./bin/www
 
 module.exports = app;
