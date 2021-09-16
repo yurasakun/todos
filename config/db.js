@@ -1,12 +1,10 @@
 let express = require('express');
-const { MongoClient } = require('mongodb');
+const mongoose = require('mongoose');
 const uri = "mongodb+srv://Grinch:hg5hm3MIaVjP4MjZ@cluster0.kq4mb.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
-const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
-client.connect(err => {
-    console.log("Connect to database asasd");
-    // perform actions on the collection object
-    client.close();
-});
+const client = mongoose
+    .connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
+    .then((res) => console.log('Connected to DB'))
+    .catch((error) => console.log(error));
 
 module.exports = client;
